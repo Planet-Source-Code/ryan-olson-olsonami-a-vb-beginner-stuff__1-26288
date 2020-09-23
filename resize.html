@@ -1,0 +1,12 @@
+Private Sub Form_Load()<br>
+Form_Resize<br>
+End Sub<br>
+<br>
+Private Sub Form_Resize()<br>
+On Error Resume Next<br>
+code.Width = Me.ScaleWidth<br>
+code.Height = Me.ScaleHeight - Label1.Height - Command1.Height<br>
+Label1.Width = Me.ScaleWidth<br>
+Label1.Top = Me.ScaleHeight - Label1.Height - Command1.Height<br>
+Command1.Top = Me.ScaleHeight - Command1.Height<br>
+End Sub

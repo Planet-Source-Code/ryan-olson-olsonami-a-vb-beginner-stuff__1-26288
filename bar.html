@@ -1,0 +1,18 @@
+Private Sub Timer1_Timer()<br>
+On Error Resume Next<br>
+If ProgressBar1.Value < 100 Then<br>
+ProgressBar1.Value = ProgressBar1.Value + 2<br>
+Else<br>
+Timer1.Enabled = False<br>Timer2.Enabled = True<br>
+End If<br>
+End Sub<br>
+<br>
+Private Sub Timer2_Timer()<br>
+On Error Resume Next<br>
+If ProgressBar1.Value > 1 Then<br>
+ProgressBar1.Value = ProgressBar1.Value - 2<br>
+Else<br>
+Timer1.Enabled = True<br>
+Timer2.Enabled = False<br>
+End If<br>
+End Sub
